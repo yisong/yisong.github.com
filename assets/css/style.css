@@ -50,7 +50,8 @@ body {
 
 
 #pageheader a#title  {
-	font:bold 2.5em serif;
+	font-size:2.8em;
+  font-weight: bold;
 	color: #444;
   text-decoration: none;
   transition: color 0.25s ease-in;
