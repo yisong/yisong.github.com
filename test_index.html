@@ -11,16 +11,25 @@
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
      <script>
        function myFunction() {
-         window.addEventListener(
+         var id = 0;
+         
+         /*window.addEventListener(
            'pagehide',
            function() {document.getElementById("demo").innerHTML = "Paragraph changed.";},
            false
-         );
+         );*/
          
-         $(window).on(
+        $(window).on(
           'pagehide', 
-          function() {document.getElementById("demoB").innerHTML = "Paragraph changed.";}
-          );
+          function() {window.clearTimeout(id);}
+        );
+         
+        window.location = 'fb://profile?id=4';
+          
+        id = window.setTimeout(
+          function() {window.location = 'http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=389801252&mt=8';},
+          250
+        );
        }
      </script>
   </head>
