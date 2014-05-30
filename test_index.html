@@ -16,11 +16,17 @@
            function() {document.getElementById("demo").innerHTML = "Paragraph changed.";},
            false
          );
+         
+         $(window).on(
+          'pagehide', 
+          function() {document.getElementById("demoB").innerHTML = "Paragraph changed.";}
+          );
        }
      </script>
   </head>
   <body>
     <p id="demo">A Paragraph</p>
+    <p id="demoB">B Paragraph</p>
 
     <button type="button" onclick="myFunction()">Try it</button>
   </body>
