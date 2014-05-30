@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Title of the page</title>
+     <meta charset="utf-8" />
+     <meta name="description"
+        content="description text" />
+     <meta name="keywords" content="keywordA, keywordB" />
+     <script>
+       function myFunction() {
+         window.addEventListener(
+           'pagehide',
+           function() {document.getElementById("demo").innerHTML = "Paragraph changed.";},
+           false
+         );
+       }
+     </script>
+  </head>
+  <body>
+    <p id="demo">A Paragraph</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+  </body>
+</html>
+
