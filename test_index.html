@@ -11,7 +11,7 @@
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
      <script>
        function myFunction() {
-         var id = 0;
+         var ids = [];
          
          /*window.addEventListener(
            'pagehide',
@@ -21,15 +21,16 @@
          
         $(window).on(
           'pagehide', 
-          function() {window.clearTimeout(id);}
+          function() {ids.map(window.clearTimeout);}
         );
          
         window.location = 'fb://profile?id=4';
           
-        id = window.setTimeout(
+        ids.push(window.setTimeout(function() {
+          ids.splice(0);
           function() {window.location = 'http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=389801252&mt=8';},
           250
-        );
+        ));
        }
      </script>
   </head>
